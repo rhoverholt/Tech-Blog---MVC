@@ -1,0 +1,101 @@
+:root {
+  --dark-color: rgb(39, 20, 2);
+  --light-color: oldlace;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+}
+
+.banner {
+  background-color: var(--dark-color);
+  color: var(--light-color);
+  padding: 0px 0px 15px 50px;
+}
+
+nav {
+  padding: 10px 0px 10px 0px;
+}
+
+nav a {
+  color: var(--light-color);
+  padding-right: 25px;
+  text-decoration: none;
+}
+
+nav a:hover {
+  text-decoration: underline;
+}
+
+.banner-title {
+  display: inline-block;
+  background-color: var(--light-color);
+  color: var(--dark-color);
+  padding: 5px 10px;
+  margin: 5px 0px;
+  border-radius: 10px;
+  box-shadow: 5px 5px grey;
+}
+
+main {
+  background-color: var(--light-color);
+  color: var(--dark-color);
+  padding: 14px 25px;
+  border: 2px solid var(--dark-color);
+}
+
+.card {
+  border: 2px solid var(--dark-color);
+  margin-top: 15px;
+}
+
+.card-title {
+  background-color: var(--dark-color);
+  color: var(--light-color);
+  padding: 10px 5px;
+}
+
+.card-body {
+  padding: 10px;
+}
+
+.form-container {
+  display: flex;
+  text-align: center;
+}
+
+.form-container h2 {
+  margin-bottom: 10px;
+  text-align: center;
+}
+
+.form-container input {
+  margin-bottom: 10px;
+}
+
+.form-container button {
+  padding: 0px 5px;
+}
+
+.new-post-btn {
+  background-color: var(--dark-color);
+  color: var(--light-color);
+  padding: 5px 10px;
+  border-radius: 5px;
+  margin-top: 10px;
+}
+
+#new-post-form {
+  width: 400px;
+}
+
+#post-title,
+#post-text {
+  width: 100%;
+}
+
+#post-text {
+  height: 100px;
+  margin-bottom: 20px;
+}
