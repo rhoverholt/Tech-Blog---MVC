@@ -24,7 +24,7 @@ Step 1: git clone; Step 2: install node; Step 3: npm install inquirer; step 4: s
 
 node server.js -or- npm start
 
-view live on Heroku at:
+view live on Heroku at: https://rhoverholt-tech-blog-mvc.herokuapp.com/
 
 ## License <a id="license"></a>
 
