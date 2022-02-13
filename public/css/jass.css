@@ -47,17 +47,24 @@ main {
 
 .card {
   border: 2px solid var(--dark-color);
-  margin-top: 15px;
+  margin: 15px 0px;
+}
+
+.card-link {
+  text-decoration: none;
 }
 
 .card-title {
   background-color: var(--dark-color);
   color: var(--light-color);
   padding: 10px 5px;
+  display: flex;
+  justify-content: space-between;
 }
 
 .card-body {
   padding: 10px;
+  color: var(--dark-color);
 }
 
 .form-container {
@@ -78,7 +85,7 @@ main {
   padding: 0px 5px;
 }
 
-.new-post-btn {
+button {
   background-color: var(--dark-color);
   color: var(--light-color);
   padding: 5px 10px;
@@ -86,7 +93,13 @@ main {
   margin-top: 10px;
 }
 
-#new-post-form {
+button:disabled {
+  opacity: 0.3;
+}
+
+#new-post-form,
+#new-comment-area,
+#update-post-text {
   width: 400px;
 }
 
@@ -95,7 +108,9 @@ main {
   width: 100%;
 }
 
-#post-text {
+#post-text,
+#new-comment-area,
+#update-post-text {
   height: 100px;
   margin-bottom: 20px;
 }

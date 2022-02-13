@@ -1,0 +1,18 @@
+
+{{#if isNotLink}}
+{{else}}
+  <a href="./post/{{id}}" class="card-link">
+{{/if}}
+  <div class="card" data-post-id={{id}}>
+    <div class="card-title">
+      <h2>{{title}}</h2>
+       <span>posted by {{user_name}} on {{date_created}}</span>
+    </div>
+    <div class="card-body">
+      <p>{{text}}</p>
+    </div>
+  </div>
+{{#if isNotLink}}
+{{else}}
+  </a>
+{{/if}}

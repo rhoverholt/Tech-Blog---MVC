@@ -1,0 +1,60 @@
+{{#if post}}
+
+  {{#if isOwner}}
+    <p>As owner, you may:
+      <button id="update-show">Update Post</button>
+      <button id="delete-post">Delete Post</button>
+    </p>
+
+    <div id="update-div" style="display:none">
+      <div class="card" data-post-id={{post.id}}>
+        <div class="card-title">
+          <input id="update-post-title" style="width:100%; font-size: large" class="form-input" type="text" value='{{post.title}}'>
+        </div>
+        <div class="card-body">
+          <p><textarea class="form-input" id="update-post-text">{{post.text}}</textarea></p>
+          <button id="update-post">Update</button>
+        </div>
+      </div>
+      <p>Current info is displayed below as reference:</p>
+    </div>
+
+  {{/if}}
+    
+  {{> display-post post}}
+
+  {{#if post.comments}}
+    <h2>Comments:</h2>
+    {{#each post.comments as |comment|}}
+        <div class="card">
+            <div class="card-title" style="font-size:small">
+              <span>comment by {{comment.user_name}}</span>
+              <span>on {{comment.date_created}}</span>
+            </div>
+            <div class="card-body">
+            <p>{{comment.text}}</p>
+            </div>
+        </div>
+    {{/each}}
+  {{/if}}
+
+  <div class="card" id="new-comment-form" style="display:none">
+    <div class="card-title">
+      <p>Add Comment:</p>
+    </div>
+      <div class="card-body">
+      <p><textarea id="new-comment-area"></textarea></p>
+      <button id="post-new-comment">Submit</button>
+      </div>
+  </div>
+
+  <button id="add-comment">+ Add Comment</button>
+  <script src="/js/post-detail.js"></script>
+
+{{else}}
+  <div class="card">
+    <div class="card-title">
+      <h2>Invalid Post</h2>
+    </div>
+  </div>
+{{/if}}

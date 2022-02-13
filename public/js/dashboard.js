@@ -3,5 +3,5 @@ const clickCreatePost = () => {
 };
 
 document
-  .querySelector(".new-post-btn")
+  .getElementById("new-post-btn")
   .addEventListener("click", clickCreatePost);
