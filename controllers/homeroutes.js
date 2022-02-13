@@ -53,6 +53,7 @@ router.get("/post/:id", async (req, res) => {
       post.isNotLink = true;
       res.render("post-detail", {
         isPostDetail: true,
+        logged_in: req.session.logged_in,
         isOwner: req.session.user_nm == post.user_name,
         post,
         name: req.session.user_nm,

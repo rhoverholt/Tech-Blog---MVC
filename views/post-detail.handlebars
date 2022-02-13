@@ -48,7 +48,7 @@
       </div>
   </div>
 
-  <button id="add-comment">+ Add Comment</button>
+  <button id="add-comment" {{#if logged_in}}{{else}} disabled{{/if}}>+ Add Comment</button>
   <script src="/js/post-detail.js"></script>
 
 {{else}}
