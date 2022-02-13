@@ -26,6 +26,8 @@ node server.js -or- npm start
 
 view live on Heroku at: https://rhoverholt-tech-blog-mvc.herokuapp.com/
 
+![Here is a screenshot of the application demonstrating it's look and feel](./Assets/screenshot.png)
+
 ## License <a id="license"></a>
 
 MIT
