@@ -10,9 +10,9 @@ router.get("/", async (req, res) => {
 
     for (post of posts) {
       let month = post.date_created.getMonth() + 1;
-      let day = post.date_created.getDay();
+      let date = post.date_created.getDate();
       let year = post.date_created.getFullYear();
-      post.date_created = month + "/" + day + "/" + year;
+      post.date_created = month + "/" + date + "/" + year;
     }
 
     console.log(req.session.logged_in);
@@ -39,9 +39,9 @@ router.get("/post/:id", async (req, res) => {
       const post = postData.get({ plain: true });
 
       let month = post.date_created.getMonth() + 1;
-      let day = post.date_created.getDay();
+      let date = post.date_created.getDate();
       let year = post.date_created.getFullYear();
-      post.date_created = month + "/" + day + "/" + year;
+      post.date_created = month + "/" + date + "/" + year;
 
       for (comment of post.comments) {
         let month = comment.date_created.getMonth() + 1;
@@ -99,9 +99,9 @@ router.get("/dashboard", withAuth, async (req, res) => {
 
     for (post of posts) {
       let month = post.date_created.getMonth() + 1;
-      let day = post.date_created.getDay();
+      let date = post.date_created.getDate();
       let year = post.date_created.getFullYear();
-      post.date_created = month + "/" + day + "/" + year;
+      post.date_created = month + "/" + date + "/" + year;
     }
 
     res.render("dashboard", {
