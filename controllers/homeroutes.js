@@ -45,9 +45,9 @@ router.get("/post/:id", async (req, res) => {
 
       for (comment of post.comments) {
         let month = comment.date_created.getMonth() + 1;
-        let day = comment.date_created.getDay();
+        let date = comment.date_created.getDate();
         let year = comment.date_created.getFullYear();
-        comment.date_created = month + "/" + day + "/" + year;
+        comment.date_created = month + "/" + date + "/" + year;
       }
 
       post.isNotLink = true;
